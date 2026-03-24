@@ -1,1 +1,106 @@
-/* Archivo de CSS del último trabajo del módulo 4 denominado Proyecto 1 */
+/* ?Archivo de CSS del último trabajo del módulo 4 denominado Proyecto 1 */
+/* Declaración de variables */
+:root {
+  --borders: 1px black solid;
+}
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.offers {
+  display: flex;
+  gap: 1%;
+}
+.offers > article > a > img {
+  max-width: 100%;
+}
+
+header {
+  /* border: 8px yellow solid; */
+  display: flex;
+  gap: 2%;
+  max-width: 100%;
+  justify-content: space-evenly;
+  /* max-width: 100%; */
+}
+header > img {
+  /* border: 2px blue solid; */
+  max-width: 100%;
+}
+header > nav {
+  /* border: 5px black solid; */
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+}
+nav > ul {
+  padding: 0px;
+  /* border: 2px red solid; */
+  display: flex;
+  justify-content: space-around; /* Distribuye los elementos */
+  list-style: none;
+  width: 100%;
+  /* max-width: 1600px; */
+}
+nav > ul > .menu {
+  /* Es necesario este bloque de declaración ??.... */
+  /* Respuesta: No */
+  align-items: center;
+}
+nav > ul > .menu > a > img {
+  max-width: 40px;
+  /* border: 2px blue solid; */
+}
+nav > ul > .menu > a {
+  display: flex;
+  align-items: center;
+  /* border: 3px blue solid; */
+}
+/* a {
+  align-items: center;
+} No funciona esta regla */
+nav > ul > .catalogo {
+  /* display: flex;
+  align-items: center; */
+  border: var(--borders);
+  width: 30%;
+  /* justify-content: space-between; */
+}
+nav > ul > .catalogo > a {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 25%;
+}
+nav > ul > .catalogo > a > img {
+  max-width: 35px;
+}
+nav > ul > .buscadorIA {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  border: var(--borders);
+}
+nav > ul > .user > a {
+  display: flex;
+  align-items: center;
+}
+
+nav > ul > .user > a > img {
+  display: flex;
+  max-width: 40px;
+  /* border: 2px blue solid; */
+}
+/* nav > ul > .micesta {
+  display: flex;
+  align-items: center;
+} */
+nav > ul > .micesta > a {
+  display: flex;
+  align-items: center;
+}
+nav > ul > .micesta > a > img {
+  display: flex;
+  max-width: 40px;
+  /* border: 2px blue solid; */
+}
