@@ -1,11 +1,20 @@
 /* ?Archivo de CSS del último trabajo del módulo 4 denominado Proyecto 1 */
 /* Declaración de variables */
+/* Vamos a importar una fuente desde google fonts para aplicar a toda la página. También descargaremos otra fuente tipográfica para usar desde la carpeta de assets y aplicarla al precio de los artículos*/
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 :root {
   --borders: 1px black solid;
+  --descriptionSize: 10px;
 }
+@font-face {
+  font-family: 'fontPrice';
+  src: url(./assets/fonts/roboto/static/Roboto-Bold.ttf);
+}
+
 * {
   box-sizing: border-box;
   text-decoration: none;
+  font-family: 'Google Sans', sans-serif;
 }
 .offers {
   display: flex;
@@ -14,14 +23,12 @@
 .offers > article > a > img {
   max-width: 100%;
 }
-
 header {
   /* border: 8px yellow solid; */
   display: flex;
   gap: 2%;
   max-width: 100%;
-  justify-content: space-evenly;
-  /* max-width: 100%; */
+  justify-content: space-evenly; /* max-width: 100%; */
 }
 header > img {
   /* border: 2px blue solid; */
@@ -34,17 +41,14 @@ header > nav {
   max-width: 100%;
 }
 nav > ul {
-  padding: 0px;
-  /* border: 2px red solid; */
+  padding: 0px; /* border: 2px red solid; */
   display: flex;
   justify-content: space-around; /* Distribuye los elementos */
   list-style: none;
-  width: 100%;
-  /* max-width: 1600px; */
+  width: 100%; /* max-width: 1600px; */
 }
 nav > ul > .menu {
-  /* Es necesario este bloque de declaración ??.... */
-  /* Respuesta: No */
+  /* Es necesario este bloque de declaración ??.... */ /* Respuesta: No */
   align-items: center;
 }
 nav > ul > .menu > a > img {
@@ -53,8 +57,7 @@ nav > ul > .menu > a > img {
 }
 nav > ul > .menu > a {
   display: flex;
-  align-items: center;
-  /* border: 3px blue solid; */
+  align-items: center; /* border: 3px blue solid; */
 }
 /* a {
   align-items: center;
@@ -63,8 +66,7 @@ nav > ul > .catalogo {
   /* display: flex;
   align-items: center; */
   border: var(--borders);
-  width: 30%;
-  /* justify-content: space-between; */
+  width: 30%; /* justify-content: space-between; */
 }
 nav > ul > .catalogo > a {
   display: flex;
@@ -85,22 +87,40 @@ nav > ul > .user > a {
   display: flex;
   align-items: center;
 }
-
 nav > ul > .user > a > img {
   display: flex;
-  max-width: 40px;
-  /* border: 2px blue solid; */
+  max-width: 40px; /* border: 2px blue solid; */
 }
-/* nav > ul > .micesta {
-  display: flex;
-  align-items: center;
-} */
 nav > ul > .micesta > a {
   display: flex;
   align-items: center;
 }
 nav > ul > .micesta > a > img {
   display: flex;
-  max-width: 40px;
-  /* border: 2px blue solid; */
+  max-width: 40px; /* border: 2px blue solid; */
+}
+.articles > ol {
+  list-style-type: none;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+}
+.price {
+  color: crimson;
+  font-family: 'fontPrice';
+  font-size: 25px;
+}
+span {
+  color: grey;
+  text-decoration: line-through;
+  font-size: 18px;
+}
+.articles {
+}
+.sidemenu {
+  transform: translateX(-100%);
+  position: fixed;
+  left: -240px;
+  /* transition: 0.3s; */
 }
