@@ -10,12 +10,15 @@
   font-family: 'fontPrice';
   src: url(./assets/fonts/roboto/static/Roboto-Bold.ttf);
 }
-
+body {
+  margin-bottom: 8%;
+}
 * {
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Google Sans', sans-serif;
 }
+/* offers es la sección primera con 3 carátulas de ofertas especiales */
 .offers {
   display: flex;
   gap: 1%;
@@ -23,82 +26,60 @@
 .offers > article > a > img {
   max-width: 100%;
 }
+/* maquetamos el header */
 header {
-  /* border: 8px yellow solid; */
+  border: 8px yellow solid;
   display: flex;
   gap: 2%;
   max-width: 100%;
-  justify-content: space-evenly; /* max-width: 100%; */
-}
-header > img {
-  /* border: 2px blue solid; */
+  height: 80px;
+  justify-content: space-evenly;
   max-width: 100%;
 }
-header > nav {
+/* Maquetamos el menú de navegación superior */
+.top {
   /* border: 5px black solid; */
   display: flex;
   width: 100%;
   max-width: 100%;
 }
-nav > ul {
-  padding: 0px; /* border: 2px red solid; */
+.labelmenu {
   display: flex;
-  justify-content: space-around; /* Distribuye los elementos */
-  list-style: none;
-  width: 100%; /* max-width: 1600px; */
-}
-nav > ul > .menu {
-  /* Es necesario este bloque de declaración ??.... */ /* Respuesta: No */
+  width: 30%;
   align-items: center;
+  cursor: pointer;
 }
-nav > ul > .menu > a > img {
-  max-width: 40px;
-  /* border: 2px blue solid; */
+.labelmenu > img {
+  height: 30px;
 }
-nav > ul > .menu > a {
+
+.catalogo {
   display: flex;
-  align-items: center; /* border: 3px blue solid; */
-}
-/* a {
-  align-items: center;
-} No funciona esta regla */
-nav > ul > .catalogo {
-  /* display: flex;
-  align-items: center; */
-  border: var(--borders);
-  width: 30%; /* justify-content: space-between; */
-}
-nav > ul > .catalogo > a {
-  display: flex;
-  align-items: center;
   justify-content: end;
-  gap: 25%;
+  align-items: center;
+  border: var(--borders);
 }
-nav > ul > .catalogo > a > img {
-  max-width: 35px;
+.catalogo a {
+  width: 100%;
+  margin-left: 3px;
 }
-nav > ul > .buscadorIA {
+.catalogo img {
+  max-width: 30px;
+}
+.buscadorIA {
   display: flex;
   align-items: center;
   width: 20%;
   border: var(--borders);
 }
-nav > ul > .user > a {
+.user a {
   display: flex;
   align-items: center;
 }
-nav > ul > .user > a > img {
-  display: flex;
-  max-width: 40px; /* border: 2px blue solid; */
+.user img {
+  max-width: 40px;
 }
-nav > ul > .micesta > a {
-  display: flex;
-  align-items: center;
-}
-nav > ul > .micesta > a > img {
-  display: flex;
-  max-width: 40px; /* border: 2px blue solid; */
-}
+
 .articles > ol {
   list-style-type: none;
   display: grid;
@@ -116,11 +97,29 @@ span {
   text-decoration: line-through;
   font-size: 18px;
 }
-.articles {
-}
+/* Hasta aquí todo correcto */
+/* *********************************** */
+/* Maquetamos el menú lateral que aparece y desaparece al clicar en todas las categorías */
 .sidemenu {
+  background-color: aliceblue;
+  height: 100vh;
+  width: 300px;
+  /* visibility: hidden; */
+  transition: all 1s ease;
   transform: translateX(-100%);
   position: fixed;
-  left: -240px;
-  /* transition: 0.3s; */
+}
+.sidemenunav img {
+  height: 25px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.specialoffers {
+  font-size: 1.35em;
+  color: orangered;
+  font-weight: bold;
+}
+#categorymenu:checked ~ .sidemenu {
+  transition: all 1s ease;
+  transform: translateX(0%);
 }

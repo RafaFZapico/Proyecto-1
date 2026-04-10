@@ -10,30 +10,16 @@
     <link rel="icon" href="./assets/images/faviconPCcomponents.png">
   </head>
   <body>
-    <header>
-      <img src="https://cdn.pccomponentes.com/img/logos/logo-pccomponentes.svg" width="138" height="48" alt="Menú desplegable" title="PcComponentes" class="Logo-module_icon__uJDng" data-wa-hit-type="event" data-wa-event-category="main header" data-wa-event-action="logo click">
-      <nav>
-        <ul>
-          <li class="menu"><a href="#menuLateral"><img src="./assets/images/menu.png" alt="">
-          Todas las categorias</a></li>
-          <li class="catalogo"><a href="">Todo el catálogo <img src="./assets/images/desplegable.png" alt="desplegable"></a>
-                      </li>
-          <li class="buscadorIA">
-            <a href=""><img src="https://cdn.pccomponentes.com/img/asistente/stars.png" alt=""></a>
-            <a href="">Buscar con IA</a></li>
-          <li class="user"><a href=""><img src="./assets/images/usericon.png" alt="">mi cuenta</a></li>
-          <li class="micesta"><a href="">
-            <img src="./assets/images/miCarrito.png" alt="añadir al carrito">Mi cesta
-          </a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <!-- Menú lateral -->
+    <input type="checkbox" id="categorymenu">
+        <!-- Menú lateral -->
       <section class="sidemenu">
-        <div class="categories">
-<h2>Categorías</h2>
-<ul>
+        
+        <nav class="sidemenunav">
+          <label for="categorymenu" class="equis"><img src="./assets/images/equis.png" alt="icono x de ocultación de menú"></label>
+          
+  <ul class="list">
+    <a href="#" class="specialoffers">Campañas y ofertas   ></a>
+  <h3>Categorías</h3>
   <li>
     <a href="">PcComponentes</a>
   </li>
@@ -69,12 +55,41 @@
   </li>
   <li>
     <a href="">Juguetes y juegos</a>
+    <h3>Trendig</h3>
+    <li><a href="#">Configurador PCs</a></li>
+    <li><a href="#">Reacondicionados</a></li>
+    <li><a href="#">Servicios</a></li>
+    <li><a href="#">Nuestras tiendas</a></li>
+    <li><a href="#">Empresas y profesionales</a></li>
+    <li><a href="#">Espacio Apple</a></li>
   </li>
 </ul>
-        </div>
-        
-        ul
-    </section>
+</nav>
+        </section>
+    <header>
+      <!-- logo corporativo -->
+      <img src="https://cdn.pccomponentes.com/img/logos/logo-pccomponentes.svg" width="138" height="48" alt="Menú desplegable" title="PcComponentes" class="Logo-module_icon__uJDng" data-wa-hit-type="event" data-wa-event-category="main header" data-wa-event-action="logo click">
+      <!-- Menú de navegación superior -->
+      <nav class="top">  
+          <label for="categorymenu" class="labelmenu"><img src="./assets/images/menu.png" alt="icono de menu">Todas las categorías</label>
+        <ul class="ulmenu">
+          
+          <!-- LO DE ABAJO ESTA CORRECTO -->
+          <li class="catalogo"><a href="">Todo el catálogo <img src="./assets/images/desplegable.png" alt="desplegable"></a>
+                      </li>
+          <li class="buscadorIA">
+            <a href=""><img src="https://cdn.pccomponentes.com/img/asistente/stars.png" alt=""></a>
+            <a href="">Buscar con IA</a></li>
+          <li class="user"><a href=""><img src="./assets/images/usericon.png" alt="">mi cuenta</a></li>
+          <li class="micesta"><a href="">
+            <img src="./assets/images/miCarrito.png" alt="añadir al carrito">Mi cesta
+          </a></li>
+        </ul>
+      </nav>
+      <!-- Fin del menú de navegación superior -->
+    </header>
+    <main>
+  
       <!-- Sección 1 con 3 carátulas de ofertas especiales -->
       <section class="offers">
 <article>
