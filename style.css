@@ -11,7 +11,10 @@
   src: url(./assets/fonts/roboto/static/Roboto-Bold.ttf);
 }
 body {
-  margin-bottom: 8%;
+  /* margin-bottom: 8%; */
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
 }
 * {
   box-sizing: border-box;
@@ -19,6 +22,11 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 /* offers es la sección primera con 3 carátulas de ofertas especiales */
+main {
+  /* margin-top: 100px; */
+  margin-top: 10%;
+  /* position: absolute; */
+}
 .offers {
   display: flex;
   gap: 1%;
@@ -28,49 +36,108 @@ body {
 }
 /* maquetamos el header */
 header {
-  border: 8px yellow solid;
+  position: fixed;
+  height: 70px;
+  /* border: 8px yellow solid; */
+  background-color: white;
   display: flex;
   gap: 2%;
-  max-width: 100%;
-  height: 80px;
-  justify-content: space-evenly;
-  max-width: 100%;
+  width: 100%;
+  /* max-width: 100%; */
+
+  /* justify-content: space-evenly; */
+  border-bottom: 1px solid black;
+}
+header > img {
+  /* position: fixed; */
+  /* margin-left: 10px; */
+  margin: 10px;
+  opacity: 1;
 }
 /* Maquetamos el menú de navegación superior */
 .top {
   /* border: 5px black solid; */
+  /* background-color: white; */
   display: flex;
+  justify-content: space-around;
+
+  /* position: fixed; */
+  opacity: 1;
   width: 100%;
-  max-width: 100%;
+  /* max-width: 100%; */
 }
+.ulmenu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px;
+}
+
+/* Maquetamos la parte de: Todas las categorías */
 .labelmenu {
   display: flex;
-  width: 30%;
+  /* position: fixed; */
+  width: 25%;
   align-items: center;
   cursor: pointer;
 }
 .labelmenu > img {
   height: 30px;
 }
-
+/* Maquetamos la parte:"Todo el catálogo" */
 .catalogo {
   display: flex;
-  justify-content: end;
-  align-items: center;
+
+  width: 30%;
   border: var(--borders);
 }
 .catalogo a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  margin-left: 3px;
+  margin-left: 5px;
 }
 .catalogo img {
   max-width: 30px;
 }
+/* Maquetamos la parte de: Buscador IA */
 .buscadorIA {
+  margin-left: 1%;
   display: flex;
   align-items: center;
-  width: 20%;
+  width: 25%;
   border: var(--borders);
+  align-items: center;
+}
+.buscadorIA a {
+  display: flex;
+  width: 100%;
+}
+.buscadorIA img {
+  margin: auto;
+  /* border: 2px solid red; */
+  width: 20%;
+}
+.buscadorIA p {
+  width: 100%;
+  margin-left: 2%;
+  /* border: 1px solid red; */
+}
+/* Maquetamos la parte de: mi cuenta */
+.user {
+  display: flex;
+}
+.user a {
+  width: 100%;
+}
+
+/* Maquetamos la parte de micarrito */
+.micesta {
+  display: flex;
+}
+.micesta img {
+  height: 40px;
 }
 .user a {
   display: flex;
@@ -79,7 +146,7 @@ header {
 .user img {
   max-width: 40px;
 }
-
+/* maquetamos el listado de 12 artículos mostrados a al venta */
 .articles > ol {
   list-style-type: none;
   display: grid;
@@ -99,20 +166,31 @@ span {
 }
 /* Hasta aquí todo correcto */
 /* *********************************** */
-/* Maquetamos el menú lateral que aparece y desaparece al clicar en todas las categorías */
+/* Maquetamos el menú lateral que aparece y desaparece al clicar en: "▤todas las categorías" */
 .sidemenu {
+  display: flex;
   background-color: aliceblue;
   height: 100vh;
-  width: 300px;
-  /* visibility: hidden; */
+  width: 350px;
+  /* margin-top: 100px; */
   transition: all 1s ease;
   transform: translateX(-100%);
   position: fixed;
+  list-style-type: none;
 }
+/* Maquetamos la X que cierra el menú lateral */
 .sidemenunav img {
+  border: 1px solid black;
   height: 25px;
   margin-top: 10px;
   margin-left: 10px;
+  cursor: pointer;
+}
+.sidemenunav > .list {
+  list-style-type: none;
+}
+.sidemenunav > .list > li {
+  margin: 10px;
 }
 .specialoffers {
   font-size: 1.35em;
@@ -122,4 +200,7 @@ span {
 #categorymenu:checked ~ .sidemenu {
   transition: all 1s ease;
   transform: translateX(0%);
+}
+input {
+  display: none;
 }
